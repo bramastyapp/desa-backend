@@ -87,4 +87,13 @@ Route::prefix('public')->group(function () {
 
     //index posts home
     Route::get('/posts_home', [App\Http\Controllers\Api\Public\PostController::class, 'homePage']);
+
+    //index products
+    Route::get('/products', [App\Http\Controllers\Api\Public\ProductController::class, 'index']);
+
+    //show page
+    Route::get('/products/{slug}', [App\Http\Controllers\Api\Public\ProductController::class, 'show']);
+
+    //index products home
+    Route::get('/products_home', [App\Http\Controllers\Api\Public\ProductController::class, 'homePage']);
 });
